@@ -7,12 +7,11 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ElIcon: typeof import('element-plus/es')['ElIcon']
-    ElInput: typeof import('element-plus/es')['ElInput']
     GuideItem: typeof import('./src/components/Guide/GuideItem.vue')['default']
     Header: typeof import('./src/components/Shared/Header.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Search: typeof import('./src/components/Base/Search.vue')['default']
     SideBarLeft: typeof import('./src/components/Shared/SideBarLeft.vue')['default']
     SideBarRight: typeof import('./src/components/Shared/SideBarRight.vue')['default']
   }
