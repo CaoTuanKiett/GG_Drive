@@ -77,7 +77,7 @@ const input2 = ref('')
 }
 
 .headerSearch {
-  width: 50%;
+  width: 56%;
 }
 
 .headerManage {

@@ -30,7 +30,7 @@ const props = defineProps({
 .search input {
   border: none;
   background-color: #e9eef6;
-  padding: 16px 36px;
+  padding: 16px 44px;
   border-radius: 26px;
   width: 100%;
   font-size: 16px;
@@ -44,7 +44,7 @@ const props = defineProps({
 
 .searchIconSearch {
   position: absolute;
-  left: 14px;
+  left: 18px;
   font-size: 18px;
   cursor: pointer;
 
@@ -55,8 +55,8 @@ const props = defineProps({
 
 .searchIconFilter {
   position: absolute;
-  right: 16px;
-  font-size: 20px;
+  right: 18px;
+  font-size: 18px;
   cursor: pointer;
 
   &:hover {
