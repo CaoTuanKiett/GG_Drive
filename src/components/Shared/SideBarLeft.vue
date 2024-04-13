@@ -185,6 +185,7 @@ const dataMenu: MenuItem[] = [
   box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 5px 1px;
   padding: 18px 20px 18px 16px;
   transition: all 0.3s;
+  cursor: pointer;
 
   &:hover {
     background-color: #f4f4f4;
@@ -290,6 +291,7 @@ const dataMenu: MenuItem[] = [
   margin-top: 10px;
   color: var(--color-primary);
   font-weight: 500;
+  cursor: pointer;
 
   &:hover {
     background-color: #f4f4f4;

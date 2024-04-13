@@ -58,6 +58,12 @@ const input2 = ref('')
   display: flex;
   align-items: center;
   width: 16%;
+  cursor: pointer;
+  width: 110px;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .headerLogo img {
@@ -102,6 +108,11 @@ const input2 = ref('')
   align-items: center;
   width: 32px;
   height: 32px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .headerAvt img {
