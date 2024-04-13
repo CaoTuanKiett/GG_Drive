@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import logo from '@/assets/images/logo.png'
+import disconet from '@/assets/icons/disconet.svg'
+import help from '@/assets/icons/help.svg'
+import setting from '@/assets/icons/setting.svg'
+import menu from '@/assets/icons/menu.svg'
 
 const input2 = ref('')
 </script>
@@ -18,16 +22,16 @@ const input2 = ref('')
       </div>
       <div :class="$style.headerManage">
         <div :class="$style.headerManageIcon">
-          <font-awesome-icon :icon="['fas', 'cloud']" />
+          <img :src="disconet" alt="disconet">
         </div>
         <div :class="$style.headerManageIcon">
-          <font-awesome-icon :icon="['fas', 'circle-question']" />
+          <img :src="help" alt="help">
         </div>
         <div :class="$style.headerManageIcon">
-          <font-awesome-icon :icon="['fas', 'gear']" />
+          <img :src="setting" alt="setting">
         </div>
         <div :class="$style.headerManageIcon">
-          <font-awesome-icon :icon="['fas', 'bars']" />
+          <img :src="menu" alt="menu">
         </div>
         <div :class="$style.headerAvt">
           <img src="https://i.pinimg.com/564x/1c/d3/93/1cd393c81aee774ac3e0f586f7413a09.jpg" alt="avt">
@@ -40,36 +44,35 @@ const input2 = ref('')
 <style lang="scss" module>
 .header {
   background-color: #f8fafd;
-  color: white;
-  padding: 10px;
+  padding: 10px 20px;
   text-align: center;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 64px;
+  height: 100%;
 }
 
 .headerLogo {
   display: flex;
   align-items: center;
-  width: 15%;
+  width: 18%;
 }
 
 .headerLogo img {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
 }
 
 .headerTitle {
   margin-left: 10px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
 }
 
 .headerContainer {
   display: flex;
   justify-content: space-between;
-  width: 85%;
+  width: 82%;
 }
 
 .headerSearch {
@@ -82,7 +85,8 @@ const input2 = ref('')
 }
 
 .headerManageIcon {
-  margin-right: 28px;
+  margin-right: 22px;
+  margin-top: 10px;
   font-size: 22px;
   cursor: pointer;
 
@@ -94,8 +98,8 @@ const input2 = ref('')
 .headerAvt {
   display: flex;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
 }
 
 .headerAvt img {
