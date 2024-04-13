@@ -13,9 +13,22 @@ import IconFolders from '@/assets/icons/folder.svg'
 import IconSpam from '@/assets/icons/spam.svg'
 import IconCloud from '@/assets/icons/cloud.svg'
 
+interface SubItem {
+  title: string
+  icon: string
+  items?: any[]
+}
+
+interface MenuItem {
+  title: string
+  icon: string
+  list?: SubItem[]
+  oder?: boolean
+}
+
 const activeNames = ref(['1'])
 const value1 = ref(86)
-const dataMenu = [
+const dataMenu: MenuItem[] = [
   {
     title: 'Trang chủ',
     icon: IconHome,
@@ -99,20 +112,20 @@ const dataMenu = [
           Mới
         </button>
       </div>
-      <el-collapse v-model="activeNames" :class="$style.sideBarLeftTab" @change="handleChange">
+      <el-collapse v-model="activeNames" :class="$style.sideBarLeftTab">
         <div v-for="(item, index) in dataMenu" :key="index" :class="[item.oder && $style.sideBarPT10, $style.sideBarLeftItemBox]">
           <img :class="$style.sideBarLeftIcon" :src="item.icon" :alt="item.icon">
-          <img v-if="item?.list?.length > 0" :src="IconDown" alt="IconDown" :class="$style.sideBarLeftIconDown">
+          <img v-if="item?.list && item?.list?.length > 0" :src="IconDown" alt="IconDown" :class="$style.sideBarLeftIconDown">
           <el-collapse-item :title="item.title" :name="index" :class="$style.sideBarLeftItem">
             <el-collapse v-if="item.list">
               <div v-for="(subItem, subIndex) in item.list" :key="subIndex" :class="$style.sideBarLeftSubItemBox">
                 <img :class="$style.sideBarLeftIcon" :src="subItem.icon" :alt="subItem.icon">
-                <img v-if="subItem?.items?.length > 0" :src="IconDown" alt="IconDown" :class="$style.sideBarLeftIconDown">
+                <img v-if="subItem?.items && subItem?.items?.length > 0" :src="IconDown" alt="IconDown" :class="$style.sideBarLeftIconDown">
                 <el-collapse-item :title="subItem.title" :name="subIndex" :class="$style.sideBarLeftSubItem">
                   <el-collapse v-if="subItem.items">
                     <div v-for="(subSubItem, subSubIndex) in subItem.items" :key="subSubIndex" :class="$style.sideBarLeftSubSubItemBox">
                       <img :class="$style.sideBarLeftIcon" :src="subSubItem.icon" :alt="subSubItem.icon">
-                      <img v-if="subSubItem?.items?.length > 0" :src="IconDown" alt="IconDown" :class="$style.sideBarLeftIconDown">
+                      <img v-if="subSubItem?.items && subSubItem.items?.length > 0" :src="IconDown" alt="IconDown" :class="$style.sideBarLeftIconDown">
                       <el-collapse-item :title="subSubItem.title" :name="subSubIndex" :class="$style.sideBarLeftSubSubItem" />
                     </div>
                   </el-collapse>

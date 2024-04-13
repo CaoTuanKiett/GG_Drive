@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 import logo from '@/assets/images/logo.png'
 import disconet from '@/assets/icons/disconet.svg'
 import help from '@/assets/icons/help.svg'

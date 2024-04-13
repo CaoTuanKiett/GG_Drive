@@ -9,7 +9,6 @@ declare module 'vue' {
   export interface GlobalComponents {
     ElCollapse: typeof import('element-plus/es')['ElCollapse']
     ElCollapseItem: typeof import('element-plus/es')['ElCollapseItem']
-    ElIcon: typeof import('element-plus/es')['ElIcon']
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     ElSlider: typeof import('element-plus/es')['ElSlider']
     GuideItem: typeof import('./src/components/Guide/GuideItem.vue')['default']
