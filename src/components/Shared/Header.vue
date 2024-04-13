@@ -49,6 +49,7 @@ const input2 = ref('')
   text-align: center;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -56,7 +57,7 @@ const input2 = ref('')
 .headerLogo {
   display: flex;
   align-items: center;
-  width: 18%;
+  width: 16%;
 }
 
 .headerLogo img {
@@ -73,7 +74,7 @@ const input2 = ref('')
 .headerContainer {
   display: flex;
   justify-content: space-between;
-  width: 82%;
+  width: 84%;
 }
 
 .headerSearch {
