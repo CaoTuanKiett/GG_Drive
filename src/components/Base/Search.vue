@@ -1,9 +1,34 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue'
+import PopupFilter from './PopupFilter.vue'
 
 const props = defineProps({
   input: String,
 })
+
+const dialogVisible = ref(false)
+const formLabelWidth = '140px'
+const form = reactive({
+  name: '',
+  region: '',
+  date1: '',
+  date2: '',
+  delivery: false,
+  type: [],
+  resource: '',
+  desc: '',
+})
+
+function handleShowPopup() {
+  if (dialogVisible.value) {
+    console.log('hide popup')
+    dialogVisible.value = false
+  }
+  else {
+    console.log('show popup')
+    dialogVisible.value = true
+  }
+}
 </script>
 
 <template>
@@ -12,9 +37,12 @@ const props = defineProps({
       <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
     </div>
 
-    <input v-model="props.input" type="text" placeholder="Tìm trong drive">
-    <div :class="$style.searchIconFilter">
+    <input v-model="props.input" :class="$style.searchInput" type="text" placeholder="Tìm trong drive">
+    <div :class="$style.searchIconFilter" @click="handleShowPopup">
       <font-awesome-icon :icon="['fas', 'sliders']" />
+    </div>
+    <div v-if="dialogVisible" :class="$style.searchFilter">
+      <PopupFilter />
     </div>
   </div>
 </template>
@@ -27,7 +55,7 @@ const props = defineProps({
   width: 100%;
 }
 
-.search input {
+.searchInput {
   border: none;
   background-color: #e9eef6;
   padding: 16px 44px;
@@ -62,5 +90,11 @@ const props = defineProps({
   &:hover {
     opacity: 0.7;
   }
+}
+
+.searchFilter {
+  position: absolute;
+  top: 60px;
+  right: 0;
 }
 </style>
