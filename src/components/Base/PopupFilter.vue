@@ -3,7 +3,7 @@ import { defineProps, reactive } from 'vue'
 import IconPlus from '@/assets/icons/pllus.svg'
 
 const props = defineProps({
-  handleShowPopup: Function,
+  handle: Function,
 })
 
 const form = reactive({
@@ -113,7 +113,7 @@ const dataFolow = {
     <div :class="$style.popupFilterOverlay" />
     <div :class="$style.popupFilter">
       <div :class="$style.popupFilterClose">
-        <img :src="IconPlus" alt="IconPlus">
+        <img :src="IconPlus" alt="IconPlus" @click="props.handle">
       </div>
       <div :class="$style.popupFilterContent">
         <div :class="$style.popupFilterBody">
@@ -242,10 +242,10 @@ const dataFolow = {
         </el-button>
 
         <div :class="$style.popupFilterFooterBtn">
-          <el-button :class="$style.popupFilterFooterCancle">
+          <el-button :class="$style.popupFilterFooterCancle" @click="props.handle">
             Đặt lại
           </el-button>
-          <el-button :class="$style.popupFilterFooterSearch" type="primary">
+          <el-button :class="$style.popupFilterFooterSearch" type="primary" @click="props.handle">
             Tìm kiếm
           </el-button>
         </div>

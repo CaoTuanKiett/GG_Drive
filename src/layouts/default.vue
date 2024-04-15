@@ -60,7 +60,7 @@ import SideBarRight from '@/components/Shared/SideBarRight.vue'
   .defaultLayoutSideBarRight {
     background-color: #f4f4f4;
     padding: 10px;
-    width: 100px;
+    width: 60px;
   }
 
   // @media (max-width: 768px) {

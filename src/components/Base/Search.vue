@@ -7,17 +7,6 @@ const props = defineProps({
 })
 
 const dialogVisible = ref(false)
-const formLabelWidth = '140px'
-const form = reactive({
-  name: '',
-  region: '',
-  date1: '',
-  date2: '',
-  delivery: false,
-  type: [],
-  resource: '',
-  desc: '',
-})
 
 function handleShowPopup() {
   if (dialogVisible.value) {
@@ -42,7 +31,7 @@ function handleShowPopup() {
       <font-awesome-icon :icon="['fas', 'sliders']" />
     </div>
     <div v-if="dialogVisible" :class="$style.searchFilter">
-      <PopupFilter />
+      <PopupFilter :handle="handleShowPopup" />
     </div>
   </div>
 </template>
