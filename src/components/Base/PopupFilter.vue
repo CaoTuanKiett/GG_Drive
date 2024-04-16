@@ -261,7 +261,7 @@ const dataFolow = {
 .popupFilter {
   position: absolute;
   top: 0;
-  right: -173px;
+  right: 0;
   z-index: 999;
   background-color: #fff;
   border-radius: 5px;
