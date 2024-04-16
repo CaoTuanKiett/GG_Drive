@@ -73,6 +73,7 @@ const props = defineProps({
   width: 100%;
   cursor: pointer;
   padding: 0 20px;
+  border-bottom: 1px solid #ebebeb;
 
   &:hover {
     background-color: rgb(225, 228, 231);
@@ -113,7 +114,6 @@ const props = defineProps({
 .viewLinePropose p {
   font-size: 14px;
   font-weight: 500;
-  margin-right: 10px;
   color: #7b7b7b;
 }
 
@@ -152,7 +152,7 @@ const props = defineProps({
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 200px;
+  width: 134px;
 }
 
 .viewLineAddress div {

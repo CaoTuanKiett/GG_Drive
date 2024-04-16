@@ -11,16 +11,11 @@ declare module 'vue' {
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
     ElCollapse: typeof import('element-plus/es')['ElCollapse']
     ElCollapseItem: typeof import('element-plus/es')['ElCollapseItem']
-    ElDialog: typeof import('element-plus/es')['ElDialog']
-    ElForm: typeof import('element-plus/es')['ElForm']
-    ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElOption: typeof import('element-plus/es')['ElOption']
-    ElPopover: typeof import('element-plus/es')['ElPopover']
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     ElSelect: typeof import('element-plus/es')['ElSelect']
     ElSlider: typeof import('element-plus/es')['ElSlider']
-    ElTable: typeof import('element-plus/es')['ElTable']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     GuideItem: typeof import('./src/components/Guide/GuideItem.vue')['default']
     Header: typeof import('./src/components/Shared/Header.vue')['default']
@@ -31,10 +26,8 @@ declare module 'vue' {
     Search: typeof import('./src/components/Base/Search.vue')['default']
     SideBarLeft: typeof import('./src/components/Shared/SideBarLeft.vue')['default']
     SideBarRight: typeof import('./src/components/Shared/SideBarRight.vue')['default']
+    ViewBox: typeof import('./src/components/Base/ViewBox.vue')['default']
     ViewGrid: typeof import('./src/components/Base/ViewGrid.vue')['default']
     ViewLine: typeof import('./src/components/Base/ViewLine.vue')['default']
-  }
-  export interface ComponentCustomProperties {
-    vPopover: typeof import('element-plus/es')['ElPopoverDirective']
   }
 }

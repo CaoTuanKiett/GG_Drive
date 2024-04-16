@@ -19,18 +19,25 @@ const props = defineProps({
   <div :class="$style.viewGrid">
     <div :class="$style.viewGridTitle">
       <div>
-        <img :src="IconSheet" alt="IconSheet">
-        <p>Bảng tính chưa có tiêu đề</p>
+        <div v-if="props.type === 'file'">
+          <img :src="IconSheet" alt="IconSheet">
+        </div>
+        <div v-else>
+          <img :src="IconWord" alt="IconWord">
+        </div>
+        <el-tooltip content="Hỗ trợ" placement="bottom" effect="light">
+          <p>{{ props.title }}</p>
+        </el-tooltip>
       </div>
       <font-awesome-icon :icon="['fas', 'ellipsis-vertical']" />
     </div>
     <div :class="$style.viewGridImg">
-      <img src="https://i.pinimg.com/564x/01/0d/ac/010dacef99287b69d6b935f64f906603.jpg" alt="=)))">
+      <img :src="props.linkAvt" alt="=)))">
     </div>
     <div :class="$style.viewGridInfor">
-      <img src="https://i.pinimg.com/564x/01/0d/ac/010dacef99287b69d6b935f64f906603.jpg" alt="avt">
-      <p>Bạn đã tải lên</p>
-      <span>19:30</span>
+      <img :src="props.linkAvt" alt="avt">
+      <p>{{ props.user }}</p>
+      <span>{{ props.time }}</span>
     </div>
   </div>
 </template>
@@ -38,11 +45,12 @@ const props = defineProps({
 <style lang="scss" module>
 .viewGrid {
   display: flex;
-  padding: 4px 20px;
+  padding: 4px 12px;
   flex-direction: column;
-  width: 300px;
+  width: 280px;
   background-color: aliceblue;
   border-radius: 12px;
+  margin: 6px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   cursor: pointer;
 
@@ -74,10 +82,13 @@ const props = defineProps({
 }
 
 .viewGridImg {
+  width: 256px;
+  height: 200px;
+
   img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    object-fit: cover;
   }
 }
 

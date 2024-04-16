@@ -110,7 +110,7 @@ const dataFolow = {
 
 <template>
   <div :class="$style.popupFilterContainer">
-    <div :class="$style.popupFilterOverlay" />
+    <div :class="$style.popupFilterOverlay" @click="props.handle" />
     <div :class="$style.popupFilter">
       <div :class="$style.popupFilterClose">
         <img :src="IconPlus" alt="IconPlus" @click="props.handle">
@@ -174,7 +174,7 @@ const dataFolow = {
               </el-select>
             </div>
 
-            <div>
+            <div :class="$style.popupFilterCheckBox">
               <el-checkbox v-model="form.delivery">
                 Trong thùng rác
               </el-checkbox>
@@ -261,7 +261,7 @@ const dataFolow = {
 .popupFilter {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -173px;
   z-index: 999;
   background-color: #fff;
   border-radius: 5px;
@@ -321,10 +321,17 @@ const dataFolow = {
   text-align: start;
 }
 
+.popupFilterCheckBox {
+  display: flex;
+  gap: 10px;
+  margin-left: 163px;
+}
+
 .popupFilterFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
 }
 
 .popupFilterFooterHelp {
@@ -336,6 +343,7 @@ const dataFolow = {
 
 .popupFilterFooterBtn {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -349,6 +357,8 @@ const dataFolow = {
   font-size: 14px;
   font-weight: 600;
   color: #fff !important;
+  background-color: #442378a5;
+  height: 40px;
 }
 
 :global {
@@ -357,7 +367,7 @@ const dataFolow = {
   }
 
   .el-input {
-    width: 510px;
+    width: 475px;
   }
 
   .el-button {
@@ -367,6 +377,7 @@ const dataFolow = {
 
   .el-input__wrapper {
     width: 100px;
+    height: 40px
   }
 }
 </style>
