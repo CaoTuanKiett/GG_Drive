@@ -27,7 +27,6 @@ declare module 'vue' {
     SideBarLeft: typeof import('./src/components/Shared/SideBarLeft.vue')['default']
     SideBarRight: typeof import('./src/components/Shared/SideBarRight.vue')['default']
     ViewBox: typeof import('./src/components/Base/ViewBox.vue')['default']
-    ViewGrid: typeof import('./src/components/Base/ViewGrid.vue')['default']
     ViewLine: typeof import('./src/components/Base/ViewLine.vue')['default']
   }
 }

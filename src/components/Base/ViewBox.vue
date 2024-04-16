@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import IconSheet from '@/assets/icons/sheet.svg'
-import IconUsers from '@/assets/icons/users.svg'
 import IconWord from '@/assets/icons/word.svg'
 
 const props = defineProps({
